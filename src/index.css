@@ -1,13 +1,67 @@
 body {
+  font-family: Arial, sans-serif;
+  background-color: rgb(61, 180, 180);
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.App {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.video-container {
+  width: 100%;
+  
+  max-width: 800px;
+  margin-top: 20px;
+  font-size: large;
+  font-family: "Roboto",sans-serif;
+  color: rgb(6, 11, 20);
+}
+
+.subtitle-settings {
+  background-color: rgb(12, 148, 148);
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(10, 8, 8, 0.1);
+  text-align: left;
+}
+
+.subtitle-settings h3 {
+  margin-top: 0;
+  margin-bottom: 20px;
+  font-size: 1.5rem;
+  font-family: "Roboto",sans-serif;
+}
+
+.subtitle-settings label {
+  display: block;
+  margin-bottom: 10px;
+  font-size: 1rem;
+}
+
+.subtitle-settings input[type="number"],
+.subtitle-settings input[type="color"] {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 10px;
+  border: 1px solid #64b0cb;
+  border-radius: 5px;
+}
+
+.subtitle-settings button {
+  padding: 10px 20px;
+  background-color: #3474b8;
+  color: #dfcfcf;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.subtitle-settings button:hover {
+  background-color: #0056b3;
 }

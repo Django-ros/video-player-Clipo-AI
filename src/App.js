@@ -1,23 +1,26 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from 'react';
+import './index.css';
+import VideoPlayer from './components/VideoPlayer';
+import SubtitleSettings from './components/SubtitleSettings';
 
 function App() {
+  const [subtitleStyles, setSubtitleStyles] = useState({
+    fontSize: '20px',
+    fontColor: '#ffffff',
+    bgColor: '#000000',
+  });
+
+  const handleStyleChange = (newStyles) => {
+    setSubtitleStyles(newStyles);
+  };
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <div className="video-container">
+        <h2>CLIPO AI PRIVATE LIMITED</h2>
+        <VideoPlayer subtitleStyles={subtitleStyles} />
+      </div>
+      <SubtitleSettings subtitleStyles={subtitleStyles} onStyleChange={handleStyleChange} />
     </div>
   );
 }
